@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "d0dcabf5-676e-41a0-b427-0a9d1ec2d9e9",
+		"name": "ThingsToWatch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25556146"
+	},
+	"item": [
+		{
+			"name": "SteamStats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.valvesoftware.com/about/stats",
+					"protocol": "https",
+					"host": [
+						"www",
+						"valvesoftware",
+						"com"
+					],
+					"path": [
+						"about",
+						"stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Overwatch Maps",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://overfast-api.tekrop.fr/players/emongg-11183/stats/summary",
+					"protocol": "https",
+					"host": [
+						"overfast-api",
+						"tekrop",
+						"fr"
+					],
+					"path": [
+						"players",
+						"emongg-11183",
+						"stats",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "summary",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Overwatch Player Stats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://overfast-api.tekrop.fr/players/Moxie-11981/stats/summary",
+					"protocol": "https",
+					"host": [
+						"overfast-api",
+						"tekrop",
+						"fr"
+					],
+					"path": [
+						"players",
+						"Moxie-11981",
+						"stats",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Weather History",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Fishwatch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.fishwatch.gov/api/species/red-snapper",
+					"protocol": "https",
+					"host": [
+						"www",
+						"fishwatch",
+						"gov"
+					],
+					"path": [
+						"api",
+						"species",
+						"red-snapper"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bird Recordings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://xeno-canto.org/api/2/recordings?query=Eastern+whip-poor-will",
+					"protocol": "https",
+					"host": [
+						"xeno-canto",
+						"org"
+					],
+					"path": [
+						"api",
+						"2",
+						"recordings"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Eastern+whip-poor-will"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chinese Text Project",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.ctext.org/getstats",
+					"protocol": "https",
+					"host": [
+						"api",
+						"ctext",
+						"org"
+					],
+					"path": [
+						"getstats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Corpo Buzz Words",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://corporatebs-generator.sameerkumar.website/",
+					"protocol": "https",
+					"host": [
+						"corporatebs-generator",
+						"sameerkumar",
+						"website"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Whiskey Watch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 1000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"\r",
+							"//This api apparently watches scotches and irish whiskies?"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "whiskyhunter.net/api/distillery_data/willett/",
+					"host": [
+						"whiskyhunter",
+						"net"
+					],
+					"path": [
+						"api",
+						"distillery_data",
+						"willett",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test API Reqres",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Email = \"eve.holt@reqres.in\",\r\nPassword = \"pistol\""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test API Reqres DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users/2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
