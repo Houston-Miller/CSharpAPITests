@@ -219,17 +219,20 @@
 			"response": []
 		},
 		{
-			"name": "Whiskey Watch",
+			"name": "Whiskey Watch Negative",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
+							"pm.test(\"Status code is 404\", function () {\r",
 							"    pm.response.to.have.status(404);\r",
 							"});\r",
 							"pm.test(\"Response time is less than 1000ms\", function () {\r",
 							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Not Found\");\r",
 							"});\r",
 							"\r",
 							"//This api apparently watches scotches and irish whiskies?"
